@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #020521;
+    font-family: sans-serif;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#checkbox{
+    display: none;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease-in-out;
+}
+
+.upperTextLeft{
+    color: white;
+    font-size: 3em;
+    padding-right: 1rem;
+    padding-top: 20px;
+    margin-left: -1rem;
+    font-weight: bolder;
+}
+
+.upperTextRight{
+    color: white;
+    font-size: 3em;
+    padding-left: 1.5rem;
+    padding-top: 20px;
+    opacity: 0.2;
+    font-weight: bolder;
+}
+
+.toggle1{
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle1:before {
+    content: "";
+    position: relative;
+    width: 70px;
+    height: 28px;
+    top: 7px;
+    left: 5px;
+    background: #061283;
+    opacity: 0.7;
+    display: block;
+    border-radius: 15px;
+    transition: background 0.3s ease;
+}
+
+.toggle1 span{
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    width: 35px;
+    height: 35px;
+    display: block;
+    background: #061283;
+    border: 1px solid #061283;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #06128366;
+    transition: all 0.3s ease;
+}
+
+.toggle1 span:before{
+    content: "";
+    position: absolute;
+    display: block;
+    margin: -8px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #8200fb80;
+    transform: scale(0);
+    opacity: 1;
+}
+
+.toggle1 span .dark{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+
+}
+.toggle1 span .light{
+   display: none; 
+}
+
+#checkbox:checked + .toggle1:before{
+    background: #ffffffb3;
+}
+
+#checkbox:checked + .toggle1 span{
+    background: #5d56d2;
+    transform: translateX(35px);
+    border: 1px solid #5d56d2;
+    box-shadow: 0px 0px 10px #ffffff4d;
+}
+
+#checkbox:checked + .toggle1 span:before{
+    transform: scale(2);
+    opacity: 0 ;
+    transition: all 0.5s ease;
+}
+
+#checkbox:checked + .toggle1 span .dark{
+    display: none;
+}
+
+#checkbox:checked + .toggle1 span .light{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.lightUI{
+    background: #00aeff;
+    transition: all 0.7s ease-in-out;
+}
+
+.lightUI .upperTextLeft{
+    opacity: 0.2;
+}
+
+.lightUI .upperTextRight{
+    opacity: 1;
+}
+
+
+ 
